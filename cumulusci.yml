@@ -1,0 +1,45 @@
+minimum_cumulusci_version: '3.56.0'
+project:
+    name: lm-cci-template
+    package:
+        name: pkg
+        api_version: '54.0'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+orgs:
+    scratch:
+        lm:
+            config_file: config/project-scratch-def.json
+            days: 30
+
+tasks:
+    robot:
+        options:
+            suites: robot/lm-cci-template/tests
+            options:
+                outputdir: robot/lm-cci-template/results
+
+    robot_testdoc:
+        options:
+            path: robot/lm-cci-template/tests
+            output: robot/lm-cci-template/doc/lm-cci-template_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
+
+flows:    
+    setup_lm:
+        group: Loyalty Management
+        description: assigns PSLs, perms, pushes industriessettings file
+        steps: 
+            1:
+                task: assign_permission_set_licenses
+                options:
+                    api_names: LoyaltyManagementPsl
+            2:
+                task: assign_permission_sets
+                options:
+                    api_names: LoyaltyAdmin, LoyaltyAnalyticsUser,LoyaltyAnalyticsAdmin,AnalyticsStoreUser
