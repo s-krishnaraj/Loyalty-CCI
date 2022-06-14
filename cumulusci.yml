@@ -48,3 +48,8 @@ flows:
                 options:
                     mapping: datasets/mapping.yml 
                     sql_path: datasets/seed_data.sql
+            4:
+                task: dx
+                options:
+                    command: force:source:deploy
+                    extra: -m force-app/main/default/standardValueSets,force-app/main/default/prompts

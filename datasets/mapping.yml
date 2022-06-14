@@ -8,12 +8,132 @@ Product Category:
     fields:
         - Name
         - SortOrder
+    lookups:
+      CatalogId:
+          table: ProductCatalog
+
 
 Product2:
     sf_object: Product2
     fields:
         - Name
         - IsActive
+
+Account and Person Accounts:
+    sf_object: Account
+    fields:
+      # Person Account Fields
+      - PersonBirthdate
+      - PersonMobilePhone
+      - PersonTitle
+      - PersonEmail
+      - FirstName
+      - LastName
+      
+      # business account fields
+      - Name
+      - Website
+      - Industry
+      - NumberOfEmployees
+      - BillingStreet
+      - BillingCity
+      - BillingState
+      - BillingCountry
+      - Type
+
+      #common
+      - RecordtypeId
+
+
+Loyalty Program:
+    sf_object: LoyaltyProgram
+    fields:
+      - Name
+      - Status
+      - IsPrimary
+      - Description
+
+Loyalty Tier Groups:
+    sf_object: LoyaltyTierGroup
+    fields:
+      - Name
+      - IsActive
+      - Description
+      - TierModel
+      - ExtendExpiration
+      - TierPeriodUnit
+      - TierPeriodQuantity
+      - IsPrimary
+      - QpResetDate  #set to end of year
+      - QpResetFrequency
+      - QpResetPeriod
+    lookups:
+      LoyaltyProgramId:
+          table: LoyaltyProgram
+
+
+Loyalty Tiers:
+    sf_object: LoyaltyTier
+    fields:
+        - Description
+        - Name
+        - SequenceNumber
+    lookups:
+      LoyaltyTierGroupId:
+          table: LoyaltyTierGroup
+
+Loyalty Program Currencies:
+    sf_object: LoyaltyProgramCurrency
+    fields:
+      - IsActive
+      - Name
+      - CostperUnit
+      - CurrencyType
+      - ExpiryPeriodFrequency
+      - ExpiryPeriodUnit
+      - ExpiryModel
+      - ExtendExpiration
+      - IsPrimary
+    lookups:
+      LoyaltyProgramId:
+          table: LoyaltyProgram
+      LoyaltyTierGroupId:
+          table: LoyaltyTierGroup
+
+
+Loyalty Program Partners:
+    sf_object: LoyaltyProgramPartner
+    fields:
+      - AccrualCostperUnit
+      - BillingType
+      - PartnerIndustry
+      - Name
+      - PartnerCategory
+      - PartnershipStartDate
+      - RedemptionCostperUnit
+      - PartnerStatus
+      - PartnerType
+    lookups:
+      LoyaltyProgramId:
+          table: LoyaltyProgram
+      LoyaltyPartnerId:
+          table: Account
+
+
+
+Loyalty Partner Products:
+    sf_object: LoyaltyPartnerProduct
+    fields:
+      - StartDate
+      - Name
+    lookups:
+      ProductId:
+          table: ProductCategory
+      LoyaltyPartnerId:
+          table: LoyaltyProgramPartner
+
+
+
 
 #JournalType:
    # sf_object: JournalType
