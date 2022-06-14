@@ -43,13 +43,20 @@ flows:
                 task: assign_permission_sets
                 options:
                     api_names: LoyaltyAdmin, LoyaltyAnalyticsUser,LoyaltyAnalyticsAdmin,AnalyticsStoreUser
+            
             3:
-                task: load_dataset
+                task: dx
                 options:
-                    mapping: datasets/mapping.yml 
-                    sql_path: datasets/seed_data.sql
+                    command: force:source:deploy
+                    extra: -p force-app/main/default/prompts/AssignBenefitstoPlatinumTier.prompt-meta.xml,force-app/main/default/prompts/BenefitTypes.prompt-meta.xml,force-app/main/default/prompts/Voucher.prompt-meta.xml,force-app/main/default/prompts/PromotionPrompt.prompt-meta.xml,force-app/main/default/prompts/LoyaltyProgramWalkthrough.prompt-meta.xml,force-app/main/default/prompts/MapBenefitActions.prompt-meta.xml
             4:
                 task: dx
                 options:
                     command: force:source:deploy
-                    extra: -m force-app/main/default/standardValueSets,force-app/main/default/prompts
+                    extra: -p force-app/main/default/standardValueSets/BenefitCategory.standardValueSet-meta.xml,force-app/main/default/standardValueSets/LPPartnerPartnerIndustry.standardValueSet-meta.xml
+            
+            5:
+                task: load_dataset
+                options:
+                    mapping: datasets/mapping.yml 
+                    sql_path: datasets/seed_data.sql
