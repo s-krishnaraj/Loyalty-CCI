@@ -1,0 +1,34 @@
+Catalogs:
+    sf_object: ProductCatalog
+    fields: 
+        - Name
+
+Product Category:
+    sf_object: ProductCategory
+    fields:
+        - Name
+        - SortOrder
+
+Product2:
+    sf_object: Product2
+    fields:
+        - Name
+        - IsActive
+
+#JournalType:
+   # sf_object: JournalType
+    #fields:
+     #   - Name
+     #   - Description
+     #   - ProcessType
+
+#JournalsubType:
+   # sf_object: JournalSubType
+   # fields:
+   #     - Description
+   #     - Name
+   # lookups:
+   #   JournalTypeId:
+   #       table: JournalType
+
+        

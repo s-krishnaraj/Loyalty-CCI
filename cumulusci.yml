@@ -43,3 +43,8 @@ flows:
                 task: assign_permission_sets
                 options:
                     api_names: LoyaltyAdmin, LoyaltyAnalyticsUser,LoyaltyAnalyticsAdmin,AnalyticsStoreUser
+            3:
+                task: load_dataset
+                options:
+                    mapping: datasets/mapping.yml 
+                    sql_path: datasets/seed_data.sql
