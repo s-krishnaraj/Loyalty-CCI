@@ -36,6 +36,33 @@ CREATE TABLE "Account_rt_mapping" (
 );
 INSERT INTO "Account_rt_mapping" VALUES('0120p000001Uno4AAC','Business_Account');
 INSERT INTO "Account_rt_mapping" VALUES('0120p000001Uno5AAC','PersonAccount');
+CREATE TABLE "Benefit" (
+	id INTEGER NOT NULL, 
+	"Name" VARCHAR(255), 
+	"PrioritySequence" VARCHAR(255), 
+	"IsActive" VARCHAR(255), 
+	"Description" VARCHAR(255), 
+	"Value" VARCHAR(255), 
+	"BenefitTypeId" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "Benefit" VALUES(1,'$20 Voucher on Denali Jacket','30','True','','','1');
+INSERT INTO "Benefit" VALUES(2,'10% off on apparel voucher','10','True','','','1');
+INSERT INTO "Benefit" VALUES(3,'Free Shipping on orders greater than $40','20','True','','','2');
+INSERT INTO "Benefit" VALUES(4,'Free Shipping on orders greater than $75','10','True','','','2');
+INSERT INTO "Benefit" VALUES(5,'Free Shipping on All Orders','30','True','','','2');
+INSERT INTO "Benefit" VALUES(6,'15% off on Apparel Voucher','20','True','','','1');
+CREATE TABLE "BenefitType" (
+	id INTEGER NOT NULL, 
+	"Name" VARCHAR(255), 
+	"Category" VARCHAR(255), 
+	"ProcessType" VARCHAR(255), 
+	"Description" VARCHAR(255), 
+	"LoyaltyProgramId" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "BenefitType" VALUES(1,'Exclusive Discounts','Member Exclusives','Loyalty','Access to exclusive discounts on merchandise','1');
+INSERT INTO "BenefitType" VALUES(2,'Shipping','Orders','Loyalty','Free shipping of orders','1');
 CREATE TABLE "LoyaltyPartnerProduct" (
 	id INTEGER NOT NULL, 
 	"StartDate" VARCHAR(255), 
@@ -145,4 +172,25 @@ CREATE TABLE "ProductCategory" (
 INSERT INTO "ProductCategory" VALUES(1,'Makeup','30','1');
 INSERT INTO "ProductCategory" VALUES(2,'Footwear','40','1');
 INSERT INTO "ProductCategory" VALUES(3,'Apparel','10','1');
+CREATE TABLE "VoucherDefinition" (
+	id INTEGER NOT NULL, 
+	"Name" VARCHAR(255), 
+	"IsActive" VARCHAR(255), 
+	"CostPerVoucher" VARCHAR(255), 
+	"Description" VARCHAR(255), 
+	"EffectiveDate" VARCHAR(255), 
+	"ExpirationDate" VARCHAR(255), 
+	"ExpirationPeriod" VARCHAR(255), 
+	"DiscountPercent" VARCHAR(255), 
+	"ExpirationPeriodUnit" VARCHAR(255), 
+	"ExpirationType" VARCHAR(255), 
+	"FaceValue" VARCHAR(255), 
+	"Type" VARCHAR(255), 
+	"LoyaltyProgramId" VARCHAR(255), 
+	"PartnerAccountId" VARCHAR(255), 
+	"ProductId" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "VoucherDefinition" VALUES(1,'10% discount on Apparel','True','','','2022-02-01','2022-12-31','','10','','FixedDate','','DiscountPercentage','1','4','3');
+INSERT INTO "VoucherDefinition" VALUES(2,'15% Discount on Apparel','True','0.1','','2022-01-01','2022-12-31','','15','','FixedDate','','DiscountPercentage','1','','3');
 COMMIT;

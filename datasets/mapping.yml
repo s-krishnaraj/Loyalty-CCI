@@ -133,6 +133,52 @@ Loyalty Partner Products:
           table: LoyaltyProgramPartner
 
 
+Benefit Types:
+    sf_object: BenefitType
+    fields:
+      - Name
+      - Category
+      - ProcessType
+      - Description
+    lookups:
+      LoyaltyProgramId:
+          table: LoyaltyProgram
+
+Benefits:
+    sf_object: Benefit
+    fields:
+      - Name
+      - PrioritySequence
+      - IsActive
+      - Description
+      - Value
+    lookups:
+      BenefitTypeId:
+          table: BenefitType
+      
+Voucher Definitions:
+      sf_object: VoucherDefinition
+      fields:
+          - Name
+          - IsActive
+          - CostPerVoucher
+          - Description
+          - EffectiveDate
+          - ExpirationDate
+          - ExpirationPeriod
+          - DiscountPercent
+          - ExpirationPeriodUnit
+          - ExpirationType
+          - FaceValue
+          - Type
+      lookups:
+          LoyaltyProgramId:
+            table: LoyaltyProgram
+          PartnerAccountId:
+            table: Account
+          ProductId:
+            table: ProductCategory
+          
 
 
 #JournalType:
