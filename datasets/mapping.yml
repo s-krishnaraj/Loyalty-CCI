@@ -178,6 +178,22 @@ Voucher Definitions:
             table: Account
           ProductId:
             table: ProductCategory
+
+Promotions:
+  sf_object: Promotion
+  fields:
+    - Name
+    - Description
+    - IsActive
+    - Description
+    - EndDate
+    - StartDate
+    - Objective
+    - TransactionJournalType
+    - LoyaltyPromotionType
+  lookups:
+    LoyaltyProgramId:
+      table: LoyaltyProgram
           
 
 

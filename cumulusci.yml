@@ -60,3 +60,8 @@ flows:
                 options:
                     mapping: datasets/mapping.yml 
                     sql_path: datasets/seed_data.sql
+            6:
+                task: dx
+                options:
+                    command: force:source:deploy
+                    extra: -m "LoyaltyProgramSetup"

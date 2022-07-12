@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LoyaltyProgramSetup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>NTO Insider</label>
+    <programProcesses>
+        <executionType>RealTime</executionType>
+        <journalSubType>Purchase</journalSubType>
+        <journalType>Accrual</journalType>
+        <parameters>
+            <dataType>Text</dataType>
+            <isCollection>false</isCollection>
+            <isInput>false</isInput>
+            <isOutput>false</isOutput>
+            <parameterName>MemberTier</parameterName>
+            <parameterType>Variable</parameterType>
+        </parameters>
+        <parameters>
+            <dataType>Numeric</dataType>
+            <decimalPlaces>0</decimalPlaces>
+            <isCollection>false</isCollection>
+            <isInput>false</isInput>
+            <isOutput>false</isOutput>
+            <parameterName>DOB_Month</parameterName>
+            <parameterType>Variable</parameterType>
+        </parameters>
+        <parameters>
+            <dataType>Numeric</dataType>
+            <decimalPlaces>0</decimalPlaces>
+            <isCollection>false</isCollection>
+            <isInput>false</isInput>
+            <isOutput>false</isOutput>
+            <parameterName>DOB_Day</parameterName>
+            <parameterType>Variable</parameterType>
+        </parameters>
+        <processName>Process for Accrual Transactions</processName>
+        <processType>TransactionJournal</processType>
+        <rules>
+            <actions>
+                <actionName>Credit Points</actionName>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>PointsToCredit</parameterName>
+                    <value>{!TransactionJournal.TransactionAmount}</value>
+                </actionParameters>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>ProgramCurrencyName</parameterName>
+                    <value>Points</value>
+                </actionParameters>
+                <actionType>CreditPoints</actionType>
+            </actions>
+            <actions>
+                <actionName>Credit Tier Points</actionName>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>PointsToCredit</parameterName>
+                    <value>{!TransactionJournal.TransactionAmount}</value>
+                </actionParameters>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>ProgramCurrencyName</parameterName>
+                    <value>Tier Points</value>
+                </actionParameters>
+                <actionType>CreditPoints</actionType>
+            </actions>
+            <ruleName>Base Rule</ruleName>
+            <startDate>2022-04-01</startDate>
+            <status>Active</status>
+            <stepMappings>
+                <associatedStep>Credit Points</associatedStep>
+                <sequence>1</sequence>
+            </stepMappings>
+            <stepMappings>
+                <associatedStep>Credit Tier Points</associatedStep>
+                <sequence>2</sequence>
+            </stepMappings>
+        </rules>
+        <rules>
+            <actions>
+                <actionName>Get Tier</actionName>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>LoyaltyTierGroupName</parameterName>
+                    <value>Status Tier Group</value>
+                </actionParameters>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>LoyaltyMemberTier</parameterName>
+                    <value>MemberTier</value>
+                </actionParameters>
+                <actionType>GetMemberTier</actionType>
+            </actions>
+            <actions>
+                <actionName>Credit 3X Points</actionName>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>ProgramCurrencyName</parameterName>
+                    <value>Points</value>
+                </actionParameters>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>PointsToCredit</parameterName>
+                    <value>{!TransactionJournal.TransactionAmount} * 3</value>
+                </actionParameters>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>Notes</parameterName>
+                    <value>3X Bonus Points</value>
+                </actionParameters>
+                <actionType>CreditPoints</actionType>
+            </actions>
+            <conditions>
+                <conditionCriteria>1</conditionCriteria>
+                <conditionFilterCriteria>
+                    <operator>Equals</operator>
+                    <sequence>1</sequence>
+                    <sourceFieldName>MemberTier</sourceFieldName>
+                    <value>Silver</value>
+                    <valueType>Literal</valueType>
+                </conditionFilterCriteria>
+                <conditionName>Is Silver Member</conditionName>
+                <conditionType>Condition</conditionType>
+            </conditions>
+            <endDate>2022-08-31</endDate>
+            <previousRule>Base Rule</previousRule>
+            <promotion>3X Bonus Promotion</promotion>
+            <ruleName>3X Bonus  Promotion</ruleName>
+            <startDate>2022-04-01</startDate>
+            <status>Active</status>
+            <stepMappings>
+                <associatedStep>Is Silver Member</associatedStep>
+                <sequence>2</sequence>
+            </stepMappings>
+            <stepMappings>
+                <associatedStep>Get Tier</associatedStep>
+                <sequence>1</sequence>
+            </stepMappings>
+            <stepMappings>
+                <associatedStep>Credit 3X Points</associatedStep>
+                <parentStep>Is Silver Member</parentStep>
+                <sequence>1</sequence>
+            </stepMappings>
+        </rules>
+        <rules>
+            <actions>
+                <actionName>Capture DOB values</actionName>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>DOB_Day</parameterName>
+                    <sequenceNumber>2</sequenceNumber>
+                    <value>DAY({!TransactionJournal.Member.Contact.Birthdate} )</value>
+                </actionParameters>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>DOB_Month</parameterName>
+                    <sequenceNumber>1</sequenceNumber>
+                    <value>MONTH({!TransactionJournal.Member.Contact.Birthdate} )</value>
+                </actionParameters>
+                <actionType>AssignParameterValues</actionType>
+            </actions>
+            <actions>
+                <actionName>Credit 2X Points for Birthday</actionName>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>Notes</parameterName>
+                    <value>credit additional 2X points for a birthday purchase</value>
+                </actionParameters>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>PointsToCredit</parameterName>
+                    <value>{!TransactionJournal.TransactionAmount}  * 2</value>
+                </actionParameters>
+                <actionParameters>
+                    <operator>Equals</operator>
+                    <parameterName>ProgramCurrencyName</parameterName>
+                    <value>Points</value>
+                </actionParameters>
+                <actionType>CreditPoints</actionType>
+            </actions>
+            <conditions>
+                <conditionCriteria>1 AND 2</conditionCriteria>
+                <conditionFilterCriteria>
+                    <operator>Equals</operator>
+                    <sequence>1</sequence>
+                    <sourceFieldName>DOB_Month</sourceFieldName>
+                    <value>MONTH(DATEVALUE({!TransactionJournal.ActivityDate} ))</value>
+                    <valueType>Formula</valueType>
+                </conditionFilterCriteria>
+                <conditionFilterCriteria>
+                    <operator>Equals</operator>
+                    <sequence>2</sequence>
+                    <sourceFieldName>DOB_Day</sourceFieldName>
+                    <value>DAY(DATEVALUE({!TransactionJournal.ActivityDate} ))</value>
+                    <valueType>Formula</valueType>
+                </conditionFilterCriteria>
+                <conditionName>Check for Birthday Purchase</conditionName>
+                <conditionType>Condition</conditionType>
+            </conditions>
+            <previousRule>3X Bonus  Promotion</previousRule>
+            <promotion>Birthday promotion</promotion>
+            <ruleName>Birthday Promotion</ruleName>
+            <startDate>2021-06-01</startDate>
+            <status>Active</status>
+            <stepMappings>
+                <associatedStep>Check for Birthday Purchase</associatedStep>
+                <sequence>2</sequence>
+            </stepMappings>
+            <stepMappings>
+                <associatedStep>Capture DOB values</associatedStep>
+                <sequence>1</sequence>
+            </stepMappings>
+            <stepMappings>
+                <associatedStep>Credit 2X Points for Birthday</associatedStep>
+                <parentStep>Check for Birthday Purchase</parentStep>
+                <sequence>1</sequence>
+            </stepMappings>
+        </rules>
+        <status>Active</status>
+    </programProcesses>
+</LoyaltyProgramSetup>

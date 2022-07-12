@@ -172,6 +172,21 @@ CREATE TABLE "ProductCategory" (
 INSERT INTO "ProductCategory" VALUES(1,'Makeup','30','1');
 INSERT INTO "ProductCategory" VALUES(2,'Footwear','40','1');
 INSERT INTO "ProductCategory" VALUES(3,'Apparel','10','1');
+CREATE TABLE "Promotion" (
+	id INTEGER NOT NULL, 
+	"Name" VARCHAR(255), 
+	"Description" VARCHAR(255), 
+	"IsActive" VARCHAR(255), 
+	"EndDate" VARCHAR(255), 
+	"StartDate" VARCHAR(255), 
+	"Objective" VARCHAR(255), 
+	"TransactionJournalType" VARCHAR(255), 
+	"LoyaltyPromotionType" VARCHAR(255), 
+	"LoyaltyProgramId" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "Promotion" VALUES(1,'3X Bonus Promotion','3X Points for the purchases made this month','False','2022-08-31','2022-04-01','','Accrual','Standard','1');
+INSERT INTO "Promotion" VALUES(2,'Birthday promotion','2X Points credited additionally on member purchases on their birthday','False','','2021-06-01','Member engagement improvement with personalised promotions','Accrual','Standard','1');
 CREATE TABLE "VoucherDefinition" (
 	id INTEGER NOT NULL, 
 	"Name" VARCHAR(255), 
