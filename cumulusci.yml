@@ -43,25 +43,45 @@ flows:
                 task: assign_permission_sets
                 options:
                     api_names: LoyaltyAdmin, LoyaltyAnalyticsUser,LoyaltyAnalyticsAdmin,AnalyticsStoreUser
-            
+              
             3:
-                task: dx
-                options:
-                    command: force:source:deploy
-                    extra: -p force-app/main/default/prompts/AssignBenefitstoPlatinumTier.prompt-meta.xml,force-app/main/default/prompts/BenefitTypes.prompt-meta.xml,force-app/main/default/prompts/Voucher.prompt-meta.xml,force-app/main/default/prompts/PromotionPrompt.prompt-meta.xml,force-app/main/default/prompts/LoyaltyProgramWalkthrough.prompt-meta.xml,force-app/main/default/prompts/MapBenefitActions.prompt-meta.xml
-            4:
                 task: dx
                 options:
                     command: force:source:deploy
                     extra: -p force-app/main/default/standardValueSets/BenefitCategory.standardValueSet-meta.xml,force-app/main/default/standardValueSets/LPPartnerPartnerIndustry.standardValueSet-meta.xml
             
-            5:
+            4:
                 task: load_dataset
                 options:
                     mapping: datasets/mapping.yml 
                     sql_path: datasets/seed_data.sql
-            6:
+            5:
                 task: dx
                 options:
                     command: force:source:deploy
                     extra: -m "LoyaltyProgramSetup"
+            6:
+                task: dx
+                options:
+                    command: force:source:deploy
+                    extra: -m "ApexClass"
+            7:
+                task: dx
+                options:
+                    command: force:source:deploy
+                    extra: -m "LightningComponentBundle"
+            8:
+                task: dx
+                options:
+                    command: force:source:deploy
+                    extra: -m "FlexiPage"
+            9:
+                task: dx
+                options:
+                    command: force:source:deploy
+                    extra: -m "CustomApplication"
+            10:
+                task: dx
+                options:
+                    command: force:source:deploy
+                    extra: -p force-app/main/default/prompts/AssignBenefitstoPlatinumTier.prompt-meta.xml,force-app/main/default/prompts/BenefitTypes.prompt-meta.xml,force-app/main/default/prompts/Voucher.prompt-meta.xml,force-app/main/default/prompts/PromotionPrompt.prompt-meta.xml,force-app/main/default/prompts/LoyaltyProgramWalkthrough.prompt-meta.xml,force-app/main/default/prompts/MapBenefitActions.prompt-meta.xml

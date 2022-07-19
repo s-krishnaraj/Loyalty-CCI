@@ -2,8 +2,8 @@
 <Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
     <masterLabel>Map Benefit Actions</masterLabel>
     <promptVersions>
-        <actionButtonLabel>Finish</actionButtonLabel>
-        <actionButtonLink>/lightning/page/home</actionButtonLink>
+        <actionButtonLabel>Back to Learning Path</actionButtonLabel>
+        <actionButtonLink>/lightning/n/Loyalty_Experiences_for_Members</actionButtonLink>
         <body>&lt;p&gt;Click &lt;strong&gt;Map Actions &lt;/strong&gt;to view that the benefits are already mapped. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Add a new entry :&lt;/p&gt;&lt;p&gt;Benefits : $20 Voucher on Denali Jacket&lt;/p&gt;&lt;p&gt;Benefit Actions: Issue_Voucher&lt;/p&gt;&lt;p&gt;Value: &lt;span style=&quot;color: rgb(68, 68, 68);&quot;&gt;$20 Voucher on Denali Jacket&lt;/span&gt;&lt;/p&gt;</body>
         <customApplication>standard__LoyaltyManagement</customApplication>
         <delayDays>1</delayDays>
