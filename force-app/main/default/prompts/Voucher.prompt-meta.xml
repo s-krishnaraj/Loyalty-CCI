@@ -2,8 +2,8 @@
 <Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
     <masterLabel>Voucher</masterLabel>
     <promptVersions>
-        <actionButtonLabel>Next</actionButtonLabel>
-        <actionButtonLink>/lightning/page/home</actionButtonLink>
+        <actionButtonLabel>Back to Learning Path</actionButtonLabel>
+        <actionButtonLink>/lightning/n/Loyalty_Experiences_for_Members</actionButtonLink>
         <body>&lt;p&gt;Vouchers can be issued as an action and tied to loyalty processes like accrual, redemption, tier upgrade. You can define three types of vouchers in Loyalty Management:&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Fixed Value (example: $10 discount)&lt;/li&gt;&lt;li&gt; Discount Percentage (example: 15% discount)&lt;/li&gt;&lt;li&gt;Product or Service (example: free spa or coffee)&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;You can define a validity period for vouchers so that they have a fixed life from the date they’re issued.&lt;/p&gt;</body>
         <customApplication>standard__LoyaltyManagement</customApplication>
         <delayDays>1</delayDays>
@@ -11,9 +11,9 @@
         <header>Vouchers</header>
         <isPublished>true</isPublished>
         <masterLabel>Voucher</masterLabel>
-        <publishedDate>2022-06-09</publishedDate>
+        <publishedDate>2022-07-13</publishedDate>
         <shouldDisplayActionButton>true</shouldDisplayActionButton>
-        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <startDate>2022-06-09</startDate>
         <targetPageKey1>VoucherDefinition</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>

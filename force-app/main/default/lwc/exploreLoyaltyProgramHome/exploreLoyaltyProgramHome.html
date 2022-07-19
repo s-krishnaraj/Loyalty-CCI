@@ -1,0 +1,42 @@
+<template>
+    <lightning-card footer="" title="">
+        <h1 class="slds-text-heading_medium">{app_welcome_text}</h1> 
+       
+        <div class="c-container"> 
+            <lightning-layout>
+                <lightning-layout-item flexibility="auto" padding="around-small">
+                    <p class="c-description">{app_description}</p>
+
+  
+                    <c-feature-child
+                        heading="Loyalty Programs"  
+                        image="standard:channel_programs" 
+                        app-text="A loyalty program is the starting point for setting up Loyalty Management in your Salesforce org. The Loyalty Management app lets you create and set up loyalty programs. &lt;br/&gt; Let's Look at the &lt;strong/&gt;NTO Insider&lt;/strong/&gt; loyalty Program to understand its components" 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="LoyaltyProgram" 
+                        object-id={loyaltyProgramId}
+                        link-reference="standard__recordPage"></c-feature-child>
+
+                    <c-feature-child
+                        heading="Hands-On : Create a Loyalty Program Partner" 
+                        image="standard:screen" 
+                        app-text="Create a new Loyalty Program Partner for &quot;Accrual&quot; with the following details: &lt;br/&gt;  &lt;ul&gt;  &lt;li&gt; Program Partner Name : Hydra Salon &lt;/li&gt; &lt;li&gt;  Industry  : Wellness &lt;/li&gt; &lt;li&gt; Type : Accrual &lt;/li&gt; &lt;li&gt; Billing Type : Prepaid &lt;/li&gt; &lt;li&gt; Program Partnership Start Date : Today's date &lt;/li&gt; &lt;/ul&gt; Navigate to &lt;strong/&gt;NTO Insider&lt;/strong/&gt; and click on New button in the Loyalty Program Partners card to get started"
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false}
+                        object-name="LoyaltyProgram"  
+                        object-id={loyaltyProgramId}
+                        link-reference="standard__recordPage"></c-feature-child>
+
+                    
+                        <c-feature-child
+                        heading="Hands-on: Add Product/Categories to the Program Partner" 
+                        image="standard:screen" 
+                        app-text="Navigate to &quot;Hydra Salon&quot; program partner created above & add the following Loyalty Partner Product :  &lt;ol&gt;  &lt;li&gt;  Click on &quot;Add Products&quot; button &lt;/li&gt; &lt;li&gt; Choose the &quot;Add Product Categories&quot; option and click &quot;Next&quot; &lt;/li&gt; &lt;li&gt; Add &quot;Makeup&quot; as the product category and click on &quot;Done&quot; &lt;/li&gt; &lt;/ol&gt;" 
+                        link-reference="standard__webPage"></c-feature-child>
+
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

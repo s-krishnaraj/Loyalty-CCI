@@ -1,0 +1,73 @@
+<template>
+    <lightning-card footer="" title="">
+        <h1 class="slds-text-heading_medium">{app_welcome_text}</h1>
+        
+        <div class="c-container"> 
+            <lightning-layout>
+                <lightning-layout-item flexibility="auto" padding="around-small">
+                    <p class="c-description">{app_description}</p>
+
+
+                    <c-feature-child
+                        heading="Vouchers"  
+                        image="custom:custom46"  
+                        app-text="Vouchers can be created to enable experiential offers such as a pass to an exclusive event, or discounts on products and services.  Vouchers can be issued to members at the end of a redemption process to use as a form of payment with the program partners. &lt;br/&gt; Let us look at a voucher defined &quot;10% discount on Apparel&quot; that gives members 10% discount on NTO Apparels" 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="VoucherDefinition" 
+                        object-id={VoucherDefinitionId}
+                        link-reference="standard__recordPage"></c-feature-child>
+
+                    <c-feature-child
+                        heading="Benefit Types & Benefits" 
+                        image="custom:custom90"
+                        app-text="A loyalty program can have multiple benefit types. Each benefit type can have more than one benefit. Benefits can be associated with tiers. &lt;br/&gt; Let's explore a benefit type  &quot;Shipping &quot; that has been setup to see how benefits are tied to them" 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="BenefitType" 
+                        object-id={BenefitTypeId}
+                        link-reference="standard__recordPage"></c-feature-child>
+
+                    <c-feature-child
+                        heading="Hands-on : Assign benefits to a Tier" 
+                        image="standard:screen"
+                        app-text="We’ve created benefit types and the benefits for each benefit type in the previous section. Let us now assign a couple of benefits to the  &quot;Platinum Tier&quot;." 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="LoyaltyTier" 
+                        object-id={LoyaltyTierId}
+                        link-reference="standard__recordPage"></c-feature-child>
+
+                    <c-feature-child
+                        heading="Hands-On: Create a new Voucher definition" 
+                        image="standard:screen" 
+                        app-text="On the NTO Insider program, navigate to the Loyalty Experiences tab and create a new voucher definition with the following details :  &lt;ul&gt;  &lt;li&gt;  Name : Lipstick Free on every Makeup Purchase &lt;/li&gt; &lt;li&gt; Type: Product or Service &lt;/li&gt; &lt;li&gt; Partner : Hydra Salon &lt;/li&gt; &lt;li&gt; Active : True &lt;/li&gt; &lt;li&gt; Product : Makeup (Choose Product Category 1st) &lt;/li&gt; &lt;li&gt; Expiration Type : Fixed Date &lt;/li&gt; &lt;li&gt; Cost per Voucher : 1 &lt;/li&gt; &lt;li&gt; Effective Date : Beginning of Month&lt;/li&gt; &lt;li&gt; Expiration Date : 2 months from Today's date &lt;/li&gt; &lt;li&gt; Loyalty Program : NTO Insider &lt;/li&gt; &lt;/ul&gt;" 
+                       link-reference="standard__webPage"></c-feature-child>
+                        
+                    <c-feature-child
+                        heading="Hands-On : Map Benefit Actions" 
+                        image="standard:screen"
+                        app-text="Benefit Actions are actions that can be triggered for a benefit. Benefit Actions are executed when a benefit is assigned to a member. &lt;br/&gt; Let us map a Benefit Action under &quot;&lt;strong/&gt;Exclusive Discounts&lt;/strong/&gt; &quot;" 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="BenefitType" 
+                        object-id={BenefitTypeForMappingId}
+                        link-reference="standard__recordPage"></c-feature-child>
+                        
+                    <c-feature-child
+                        heading="Promotions" 
+                        image="standard:promotions" 
+                        app-text="Promotions help engage loyalty program members by providing personalized offers often tied to their behaviors, interests and preferences. Promotions help you keep members engaged with vouchers, points and experiences that result in higher spend and lifetime value. &lt;br/&gt; Let us explore a &quot;&lt;strong/&gt;3X Bonus Promotion&lt;/strong/&gt; &quot;" 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="Promotion" 
+                        object-id={PromotionId}
+                        link-reference="standard__recordPage"></c-feature-child>
+
+                       
+
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

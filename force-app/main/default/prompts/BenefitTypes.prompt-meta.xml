@@ -2,20 +2,19 @@
 <Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
     <masterLabel>Benefit Types</masterLabel>
     <promptVersions>
-        <actionButtonLabel>Next</actionButtonLabel>
-        <actionButtonLink>/lightning/page/home</actionButtonLink>
-        <body>&lt;p&gt;A loyalty program can have multiple benefit types. Each benefit type can have &lt;em&gt;more than one benefit&lt;/em&gt;. Benefits can be associated with tiers.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Before you create a Loyalty Benefit Type for your loyalty program, we need to create benefit categories in the Loyalty Benefit Type object. As the name suggests, Benefit Types are used to group the Benefits.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;We have created &lt;strong&gt;3 categories&lt;/strong&gt; here for our learning - &lt;strong&gt;Member Exclusives, Orders, Experiences&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Click on &lt;strong&gt;Related&lt;/strong&gt; tab to view the associated benefits. &lt;/p&gt;&lt;p&gt;You should see 2 benefits - &lt;strong&gt;10% off on apparel voucher&lt;/strong&gt; and &lt;strong&gt;15% off on apparel voucher&lt;/strong&gt;&lt;/p&gt;</body>
-        <customApplication>standard__LoyaltyManagement</customApplication>
+        <actionButtonLabel>Back to Learning Path</actionButtonLabel>
+        <actionButtonLink>/lightning/n/Loyalty_Experiences_for_Members</actionButtonLink>
+        <body>&lt;p&gt;A loyalty program can have multiple benefit types. Each benefit type can have &lt;em&gt;more than one benefit&lt;/em&gt;. Benefits can be associated with tiers.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Before you create a Loyalty Benefit Type for your loyalty program, we need to create benefit categories in the Loyalty Benefit Type object. As the name suggests, Benefit Types are used to group the Benefits.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;We have created &lt;strong&gt;2 Benefit Types&lt;/strong&gt; here- &lt;strong&gt;&lt;em&gt;Shipping&lt;/em&gt;&lt;/strong&gt; &amp;amp; &lt;strong&gt;&lt;em&gt;Exclusive Discounts&lt;/em&gt;&lt;/strong&gt;. We have also created &lt;strong&gt;3 categories&lt;/strong&gt; here for our learning - &lt;strong&gt;&lt;em&gt;Member Exclusives, Orders, Experiences&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Click on &lt;strong&gt;Related&lt;/strong&gt; tab to view the associated benefits.&lt;/p&gt;&lt;p&gt;You should see 3 benefits - &lt;b&gt;&lt;em&gt;Free Shipping on All Orders, Free Shipping on orders greater than $40&lt;/em&gt; &lt;/b&gt;and&lt;b&gt; &lt;/b&gt;&lt;b style=&quot;color: rgb(68, 68, 68);&quot;&gt;&lt;em&gt;Free Shipping on orders greater than $75&lt;/em&gt;&lt;/b&gt;&lt;/p&gt;</body>
         <delayDays>1</delayDays>
         <displayType>DockedComposer</displayType>
         <header>Benefit Types</header>
         <isPublished>true</isPublished>
         <masterLabel>Benefit Types</masterLabel>
-        <publishedDate>2022-06-09</publishedDate>
+        <publishedDate>2022-07-13</publishedDate>
         <shouldDisplayActionButton>true</shouldDisplayActionButton>
-        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <startDate>2022-06-09</startDate>
-        <targetPageKey1>Benefit</targetPageKey1>
+        <targetPageKey1>BenefitType</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>
         <timesToDisplay>10</timesToDisplay>

@@ -1,0 +1,51 @@
+<template>
+    <lightning-card footer="" title="">
+        <h1 class="slds-text-heading_medium">{welcome_text}</h1>
+        <div class="c-container">
+            <lightning-layout>
+                <lightning-layout-item flexibility="auto" padding="around-small"> 
+
+                    <c-in-app-landing-child 
+                        heading="Explore Loyalty Program" 
+                        icon-name="standard:reward"
+                        cloud-detail="Explore the functions of setting up a loyalty program including tiers, currencies and partners." 
+                        app="standard__LoyaltyManagement"
+                        page="Explore_Loyalty_Program"
+                        link-in-new-tab={pass_false}
+                        link-reference="standard__navItemPage"></c-in-app-landing-child>
+
+                    <c-in-app-landing-child
+                        heading="Explore Loyalty Experiences for Members"
+                        icon-name="standard:promotion_segments"
+                        cloud-detail="Setup personalized loyalty experiences for members to drive the Loyalty Program forward. Define the benefits which members can avail, setup vouchers for redemption & create promotions that can be applied to customer segments" 
+                        app="standard__LoyaltyManagement"
+                        page="Loyalty_Experiences_for_Members"
+                        link-in-new-tab={pass_false}
+                        link-reference="standard__navItemPage"></c-in-app-landing-child>
+
+                       
+                    <c-in-app-landing-child
+                        heading="Automate with Loyalty Processes" 
+                        icon-name="custom:custom63"
+                        cloud-detail="Explore how we can automate repetitive tasks like tier upgardes, accruals & redemptions for Loyalty Members using Loyalty Processes" 
+                        app="standard__LoyaltyManagement"
+                        page="Onboard_Loyalty_Program_Partners_Home"
+                        link-in-new-tab={pass_false}
+                        link-reference="standard__navItemPage"></c-in-app-landing-child>
+
+
+                        <c-in-app-landing-child
+                        heading="Engaging Loyalty Members" 
+                        icon-name="standard:channel_program_members"
+                        cloud-detail="Explore how we can add Members to the Loyalty program and engage them" 
+                        app="standard__LoyaltyManagement"
+                        page="Engage_Loyalty_Members"
+                        link-in-new-tab={pass_false}
+                        link-reference="standard__navItemPage"></c-in-app-landing-child>
+
+                       
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

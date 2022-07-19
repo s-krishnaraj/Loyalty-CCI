@@ -1,0 +1,46 @@
+<template>
+    <lightning-card footer="" title="">
+        <h1 class="slds-text-heading_medium">{app_welcome_text}</h1>
+        
+        <div class="c-container"> 
+            <lightning-layout>
+                <lightning-layout-item flexibility="auto" padding="around-small">
+                    <p class="c-description">{app_description}</p>
+
+ 
+                    <c-feature-child
+                        heading="Hands-On : Add a Loyalty Member To the NTO Insider Program" 
+                        image="standard:screen" 
+                        app-text="We have created an individual (Person Account) named &lt;strong&gt;Matt Evans&lt;/strong&gt; with DOB: 06/06/1980 &lt;br/&gt; Navigate to the &lt;strong&gt;NTO Insider&lt;/strong&gt; Loyalty Program and create a new &lt;strong&gt;Loyalty Program Member&lt;/strong&gt; for &quot;Matt Evans&quot; with the following details :  &lt;ul&gt;  &lt;li&gt;  Member Type : Individual &lt;/li&gt; &lt;li&gt; Contact: Matt Evans &lt;/li&gt; &lt;li&gt; Membership Number : 100009 &lt;/li&gt; &lt;li&gt; Enrollment Date : 01/01/2021 &lt;/li&gt; &lt;li&gt; Enrollment Channel : POS&lt;/li&gt; &lt;li&gt; Member Status : Active &lt;/li&gt; &lt;/ul&gt; Click on Save." 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="LoyaltyProgram" 
+                        object-id={loyaltyProgramId}
+                        link-reference="standard__recordPage"></c-feature-child> 
+
+                    <c-feature-child
+                        heading="Hands-On : Add a Transaction Journal for Matt Evans" 
+                        image="standard:screen"
+                        app-text="Whenever a member makes a purchase, a transaction journal is created in the system. &lt;br/&gt; Let us navigate to  &lt;strong&gt;NTO Insider &lt;/strong&gt; Loyalty Program and create a &lt;strong&gt;Transaction Journal&lt;/strong&gt; for &quot;Matt Evans&quot; with the following details: &lt;ul&gt; &lt;li&gt;  Program Member: 100009 &lt;/li&gt; &lt;li&gt; Journal Type : Accrual&lt;/li&gt; &lt;li&gt; Journal Subtype : Purchase &lt;/li&gt; &lt;li&gt; Product Category : Apparel&lt;/li&gt; &lt;li&gt; Activity Date : 06/06 of current year ( make sure it is on Matt's birthday) &lt;/li&gt; &lt;li&gt; Status : Pending &lt;/li&gt; &lt;li&gt; Loyalty Program : NTO Insider&lt;/li&gt; &lt;li&gt; Transaction Amount : 1000 &lt;/li&gt; &lt;/ul&gt; Click on Save." 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="LoyaltyProgram" 
+                        object-id={loyaltyProgramId}
+                        link-reference="standard__recordPage"></c-feature-child>
+                        
+                    <c-feature-child
+                        heading="Loyalty Ledgers" 
+                        image="custom:custom55" 
+                        app-text="Whenever we create a Transaction journal, the Loyalty Process kicks-in and evaluates the points to be credited for a member. &lt;br/&gt; For the Transaction Journal created above, you should see 4 Loyalty Ledgers created:&lt;ol&gt; &lt;li&gt; 1000 Points credited as part of Base Rule (same as Txn amt) &lt;/li&gt; &lt;li&gt; 1000 Tier Points credited as part of Base Rule (same as Txn amt) &lt;/li&gt; &lt;li&gt; 3000 points credited as part of 3X Bonus promotion &lt;/li&gt; &lt;li&gt; 2000 points credited as part of Birthday promotion (2x points) &lt;/li&gt; &lt;/ol&gt;" 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="TransactionJournal" 
+                        object-id={TransactionJournalId}
+                        link-reference="standard__recordPage"></c-feature-child>
+
+
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

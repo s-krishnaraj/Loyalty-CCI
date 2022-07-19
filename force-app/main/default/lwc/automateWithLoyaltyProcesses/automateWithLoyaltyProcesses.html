@@ -1,0 +1,47 @@
+<template>
+    <lightning-card footer="" title="">
+        <h1 class="slds-text-heading_medium">{app_welcome_text}</h1>
+        
+        <div class="c-container"> 
+            <lightning-layout>
+                <lightning-layout-item flexibility="auto" padding="around-small">
+                    <p class="c-description">{app_description}</p>
+
+   
+                    <c-feature-child
+                        heading="Overview of an Accrual Process" 
+                        image="utility:money" 
+                        app-text="Accrual transactions occur when a member performs an activity that earns them points. For example, an activity can be a product purchase from a host business or partner, a bonus, or any other business interaction." 
+                        link-reference="standard__webPage"></c-feature-child>
+
+                    <c-feature-child
+                        heading="Hands-On : Activate a Birthday Promotion" 
+                        image="standard:screen"
+                        app-text="We've created a &lt;strong/&gt;Birthday Promotion&lt;/strong/&gt; - a member's purchase on their birthday will earn them an additional 2X points based on the transaction amount. Navigate to the &lt;strong/&gt;Birthday promotion&lt;/strong/&gt; record and mark it as Active" 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="Promotion" 
+                        object-id={PromotionId}
+                        link-reference="standard__recordPage"></c-feature-child>
+                        
+                    <c-feature-child
+                        heading="Loyalty Program Process" 
+                        image="custom:custom67" 
+                        app-text="We have created a Loyalty Process for Accruals which has 3 rules:  &lt;ol&gt;  &lt;li&gt;  &lt;strong/&gt;Base Rule&lt;/strong/&gt; - to credit points to all members based on the transaction amount &lt;/li&gt; &lt;li&gt; &lt;strong/&gt;3X Bonus Promotion Rule &lt;/strong/&gt; - 3X Bonus points are credited to Silver tier members as part of an ongoing promotion &lt;/li&gt; &lt;li&gt; &lt;strong/&gt; Birthday Promotion Rule &lt;/strong/&gt; - A member will get 2X points credited, if they make a purchase on their birthday &lt;/li&gt; &lt;/ol&gt;" 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="LoyaltyProgramProcess" 
+                        object-id={LoyaltyProgramProcessId}
+                        link-reference="standard__recordPage"></c-feature-child>
+
+                        <c-feature-child
+                        heading="View Birthday Promotion process rule" 
+                        image="standard:promotions" 
+                        app-text="Click on the &lt;strong/&gt;Birthday Promotion&lt;/strong/&gt; process rule to see how we have applied condition to check for a birthday purchase" 
+                        link-reference="standard__webPage"></c-feature-child>
+
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    </lightning-card>
+</template>

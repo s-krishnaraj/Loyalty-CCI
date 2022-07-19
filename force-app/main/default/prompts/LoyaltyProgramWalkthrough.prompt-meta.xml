@@ -9,10 +9,10 @@
         <displayType>Targeted</displayType>
         <isPublished>true</isPublished>
         <masterLabel>Loyalty Program Walkthrough Step 1</masterLabel>
-        <publishedDate>2022-06-09</publishedDate>
+        <publishedDate>2022-07-13</publishedDate>
         <referenceElementContext>{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;version&quot;:2}</referenceElementContext>
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
-        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <startDate>2022-06-09</startDate>
         <stepNumber>1</stepNumber>
         <targetPageKey1>LoyaltyProgram</targetPageKey1>
@@ -101,8 +101,8 @@
         <versionNumber>1</versionNumber>
     </promptVersions>
     <promptVersions>
-        <actionButtonLabel>Finish</actionButtonLabel>
-        <actionButtonLink>/lightning/page/home</actionButtonLink>
+        <actionButtonLabel>Back To Learning Path</actionButtonLabel>
+        <actionButtonLink>/lightning/n/Explore_Loyalty_Program</actionButtonLink>
         <body>&lt;p&gt;While processing partner products into the program, you can assign products in two ways. You can either assign each product individually or assign products that are part of product categories.&lt;/p&gt;</body>
         <customApplication>standard__LoyaltyManagement</customApplication>
         <dismissButtonLabel>Dismiss</dismissButtonLabel>
