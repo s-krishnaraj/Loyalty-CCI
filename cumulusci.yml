@@ -79,8 +79,13 @@ flows:
                 task: dx
                 options:
                     command: force:source:deploy
-                    extra: -m "CustomApplication"
+                    extra: -m "CustomTab"
             10:
+                task: dx
+                options:
+                    command: force:source:deploy
+                    extra: -m "CustomApplication"
+            11:
                 task: dx
                 options:
                     command: force:source:deploy
