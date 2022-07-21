@@ -34,7 +34,7 @@ CREATE TABLE "Account_rt_mapping" (
 	developer_name VARCHAR(255), 
 	PRIMARY KEY (record_type_id)
 );
-INSERT INTO "Account_rt_mapping" VALUES('0120p000001Uno4AAC','Business_Account');
+INSERT INTO "Account_rt_mapping" VALUES('0120p000001Uno4AAC','Organisation');
 INSERT INTO "Account_rt_mapping" VALUES('0120p000001Uno5AAC','PersonAccount');
 CREATE TABLE "Benefit" (
 	id INTEGER NOT NULL, 

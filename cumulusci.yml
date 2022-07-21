@@ -8,11 +8,11 @@ project:
         default_branch: 'main'
     source_format: sfdx
 
-orgs:
-    scratch:
-        lm:
-            config_file: config/project-scratch-def.json
-            days: 30
+#orgs:
+    #scratch:
+        #lm:
+            #config_file: config/project-scratch-def.json
+            #days: 30
 
 tasks:
     robot:
@@ -49,27 +49,26 @@ flows:
                 options:
                     command: force:source:deploy
                     extra: -p force-app/main/default/standardValueSets/BenefitCategory.standardValueSet-meta.xml,force-app/main/default/standardValueSets/LPPartnerPartnerIndustry.standardValueSet-meta.xml
-            
             4:
+                task: ensure_record_types
+                options:
+                    record_type_developer_name: PersonAccount
+                    sobject: Account
+            5:
                 task: load_dataset
                 options:
                     mapping: datasets/mapping.yml 
                     sql_path: datasets/seed_data.sql
-            5:
-                task: dx
-                options:
-                    command: force:source:deploy
-                    extra: -m "LoyaltyProgramSetup"
             6:
                 task: dx
                 options:
                     command: force:source:deploy
-                    extra: -m "ApexClass"
+                    extra: -m "LoyaltyProgramSetup"
             7:
                 task: dx
                 options:
                     command: force:source:deploy
-                    extra: -m "LightningComponentBundle"
+                    extra: -m "ApexClass, LightningComponentBundle"
             8:
                 task: dx
                 options:
