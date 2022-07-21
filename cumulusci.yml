@@ -30,6 +30,14 @@ tasks:
         options:
             required_org_code_coverage_percent: 75
 
+    activate_loyalty_process:
+        description: Activate the "Accrural" Loyalty process
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        group: lm-cci-template
+        options:
+            path: scripts/LoyaltyAutomations.cls
+            apex: activateLoyaltyProcess();
+
 flows:    
     setup_lm:
         group: Loyalty Management
@@ -89,3 +97,5 @@ flows:
                 options:
                     command: force:source:deploy
                     extra: -m "Prompt"
+            12: 
+                task: activate_loyalty_process

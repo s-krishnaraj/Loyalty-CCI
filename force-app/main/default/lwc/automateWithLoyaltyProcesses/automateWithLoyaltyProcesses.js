@@ -4,9 +4,9 @@ import getPromotionList from '@salesforce/apex/GetRecordId.getPromotionForAutoma
 import getLoyaltyProgramProcessList from '@salesforce/apex/GetRecordId.getLoyaltyProgramProcess'
 
 export default class AutomateWithLoyaltyProcesses extends LightningElement {
-    @api app_description = "Learn how you can onboard Loyalty Program Partners & their products";
+    @api app_description = "Learn how you can define the process for customer recognition, rewards, and experiences by setting up Loyalty Processes";
    
-    @api app_welcome_text = "Onboard Loyalty Program Partners Home";  
+    @api app_welcome_text = "Automate with Loyalty Processes";  
 
 
     PromotionId;

@@ -13,10 +13,24 @@
 
    
                     <c-feature-child
-                        heading="Overview of an Accrual Process" 
+                        heading="Loyalty Processes: Overview of an Accrual Process" 
                         image="utility:money" 
-                        app-text="Accrual transactions occur when a member performs an activity that earns them points. For example, an activity can be a product purchase from a host business or partner, a bonus, or any other business interaction." 
+                        app-text="Accrual transactions occur when a member performs an activity that earns them points. For example, an activity can be a product purchase from a host business or partner, a bonus, or any other business interaction. &lt;br/&gt; &lt;br/&gt; We have created a Loyalty Process for Accruals which has 3 rules:  &lt;ol&gt;  &lt;li&gt;  &lt;strong/&gt;Base Rule&lt;/strong/&gt; - to credit points to all members based on the transaction amount &lt;/li&gt; &lt;li&gt; &lt;strong/&gt;3X Bonus Promotion Rule &lt;/strong/&gt; - 3X Bonus points are credited to Silver tier members as part of an ongoing promotion &lt;/li&gt; &lt;li&gt; &lt;strong/&gt; Birthday Promotion Rule &lt;/strong/&gt; - A member will get 2X points credited, if they make a purchase on their birthday &lt;/li&gt; &lt;/ol&gt;" 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="LoyaltyProgramProcess" 
+                        object-id={LoyaltyProgramProcessId}
                         link-reference="standard__webPage"></c-feature-child>
+
+                    <c-feature-child
+                        heading="Hands-On : Activate the Base Rule in the Loyalty Process" 
+                        image="standard:screen"
+                        app-text="Within &quot;Loyalty Process for Accruals&quot;, navigate to the &lt;strong/&gt;Base Rule&lt;/strong/&gt; and click on the &lt;strong&gt;Activate&lt;/strong&gt; button" 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="LoyaltyProgramProcess" 
+                        object-id={LoyaltyProgramProcessId}
+                        link-reference="standard__recordPage"></c-feature-child>
 
                     <c-feature-child
                         heading="Hands-On : Activate a Birthday Promotion" 
@@ -28,15 +42,6 @@
                         object-id={PromotionId}
                         link-reference="standard__recordPage"></c-feature-child>
                         
-                    <c-feature-child
-                        heading="Loyalty Program Process" 
-                        image="custom:custom67" 
-                        app-text="We have created a Loyalty Process for Accruals which has 3 rules:  &lt;ol&gt;  &lt;li&gt;  &lt;strong/&gt;Base Rule&lt;/strong/&gt; - to credit points to all members based on the transaction amount &lt;/li&gt; &lt;li&gt; &lt;strong/&gt;3X Bonus Promotion Rule &lt;/strong/&gt; - 3X Bonus points are credited to Silver tier members as part of an ongoing promotion &lt;/li&gt; &lt;li&gt; &lt;strong/&gt; Birthday Promotion Rule &lt;/strong/&gt; - A member will get 2X points credited, if they make a purchase on their birthday &lt;/li&gt; &lt;/ol&gt;" 
-                        app="standard__LoyaltyManagement"
-                        link-in-new-tab={pass_false} 
-                        object-name="LoyaltyProgramProcess" 
-                        object-id={LoyaltyProgramProcessId}
-                        link-reference="standard__recordPage"></c-feature-child>
 
                         <c-feature-child
                         heading="View Birthday Promotion process rule" 
