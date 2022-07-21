@@ -3,13 +3,13 @@
     <masterLabel>Loyalty Program Walkthrough</masterLabel>
     <promptVersions>
         <body>&lt;p&gt;Loyalty tier groups help you define tiers and the associated tier model for member recognition. When initializing a tier group you define three integral attributes: &lt;strong&gt;tier period, qualifying period, and tier model&lt;/strong&gt;&lt;/p&gt;</body>
-        <customApplication>standard__LoyaltyManagement</customApplication>
         <delayDays>1</delayDays>
         <dismissButtonLabel>Dismiss</dismissButtonLabel>
         <displayType>Targeted</displayType>
+        <elementRelativePosition>LeftTop</elementRelativePosition>
         <isPublished>true</isPublished>
         <masterLabel>Loyalty Program Walkthrough Step 1</masterLabel>
-        <publishedDate>2022-07-13</publishedDate>
+        <publishedDate>2022-07-21</publishedDate>
         <referenceElementContext>{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;version&quot;:2}</referenceElementContext>
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
         <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
@@ -26,7 +26,6 @@
     </promptVersions>
     <promptVersions>
         <body>&lt;p&gt;Tiers categorize loyalty program members based on their loyalty activities. As members engage more with the program, they’re recognized to higher tiers and get more exclusive benefits.&lt;/p&gt;</body>
-        <customApplication>standard__LoyaltyManagement</customApplication>
         <dismissButtonLabel>Dismiss</dismissButtonLabel>
         <displayType>Targeted</displayType>
         <isPublished>false</isPublished>
@@ -45,9 +44,9 @@
     </promptVersions>
     <promptVersions>
         <body>&lt;p&gt;Loyalty Management offers two types of currency: &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Non-Qualifying Points:&lt;/strong&gt; Members redeem these directly to purchase products or services.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Qualifying Points:&lt;/strong&gt; count toward a member’s tier status. It supports a member’s climb up the tier ladder.&lt;/p&gt;</body>
-        <customApplication>standard__LoyaltyManagement</customApplication>
         <dismissButtonLabel>Dismiss</dismissButtonLabel>
         <displayType>Targeted</displayType>
+        <elementRelativePosition>RightCenter</elementRelativePosition>
         <isPublished>false</isPublished>
         <masterLabel>Loyalty Program Walkthrough Step 3</masterLabel>
         <referenceElementContext>{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;flexipage_tabset&quot;}},&quot;version&quot;:2}</referenceElementContext>
@@ -64,9 +63,9 @@
     </promptVersions>
     <promptVersions>
         <body>&lt;p&gt;When Loyalty members purchase products from partners, they get exclusive discounts. Such partnerships promote upselling and cross-selling of related services and products.&lt;/p&gt;</body>
-        <customApplication>standard__LoyaltyManagement</customApplication>
         <dismissButtonLabel>Dismiss</dismissButtonLabel>
         <displayType>Targeted</displayType>
+        <elementRelativePosition>BottomCenter</elementRelativePosition>
         <isPublished>false</isPublished>
         <masterLabel>Loyalty Program Walkthrough Step 4</masterLabel>
         <referenceElementContext>{&quot;scope&quot;:{&quot;attributes&quot;:{&quot;id&quot;:&quot;force_relatedListSingleContainer4&quot;}},&quot;version&quot;:2}</referenceElementContext>
@@ -82,8 +81,7 @@
         <versionNumber>1</versionNumber>
     </promptVersions>
     <promptVersions>
-        <body>&lt;p&gt;Redemption partner : partner with whom members can spend their non-qualifying points.&lt;/p&gt;&lt;p&gt;Accrual partner: partner who rewards members non-qualifying points for doing business with them. &lt;/p&gt;&lt;p&gt;You can decide whether a partner is an accrual partner, a redemption partner, or both.&lt;/p&gt;</body>
-        <customApplication>standard__LoyaltyManagement</customApplication>
+        <body>&lt;p&gt;Redemption partner : partner with whom members can spend their non-qualifying points.&lt;/p&gt;&lt;p&gt;Accrual partner: partner who rewards members non-qualifying points for doing business with them.&lt;/p&gt;&lt;p&gt;You can decide whether a partner is an accrual partner, a redemption partner, or both.&lt;/p&gt;</body>
         <dismissButtonLabel>Dismiss</dismissButtonLabel>
         <displayPosition>BottomCenter</displayPosition>
         <displayType>FloatingPanel</displayType>
@@ -104,7 +102,6 @@
         <actionButtonLabel>Back To Learning Path</actionButtonLabel>
         <actionButtonLink>/lightning/n/Explore_Loyalty_Program</actionButtonLink>
         <body>&lt;p&gt;While processing partner products into the program, you can assign products in two ways. You can either assign each product individually or assign products that are part of product categories.&lt;/p&gt;</body>
-        <customApplication>standard__LoyaltyManagement</customApplication>
         <dismissButtonLabel>Dismiss</dismissButtonLabel>
         <displayType>Targeted</displayType>
         <isPublished>false</isPublished>
