@@ -29,5 +29,5 @@ Step 2 : Setup the scratch org using the command : cci flow run setup_lm --org '
   cci org connect <destination_org_name> --login-url https://instance_domain.my.salesforce.com/
   
   Step 2: Setup loyalty learning org specs using the command : 
-  cci flow run setup_lm --org destination_org3   
+  cci flow run setup_lm --org <destination_org_name>
   
