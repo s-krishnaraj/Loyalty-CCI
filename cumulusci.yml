@@ -84,9 +84,9 @@ flows:
                 task: dx
                 options:
                     command: force:source:deploy
-                    extra: -m "CustomApplication"
+                    extra: -m "CustomApplication, Profile:Admin"
             11:
                 task: dx
                 options:
                     command: force:source:deploy
-                    extra: -p force-app/main/default/prompts/AssignBenefitstoPlatinumTier.prompt-meta.xml,force-app/main/default/prompts/BenefitTypes.prompt-meta.xml,force-app/main/default/prompts/Voucher.prompt-meta.xml,force-app/main/default/prompts/PromotionPrompt.prompt-meta.xml,force-app/main/default/prompts/LoyaltyProgramWalkthrough.prompt-meta.xml,force-app/main/default/prompts/MapBenefitActions.prompt-meta.xml
+                    extra: -m "Prompt"
