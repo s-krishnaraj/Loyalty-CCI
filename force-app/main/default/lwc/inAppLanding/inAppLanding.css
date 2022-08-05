@@ -17,3 +17,8 @@
     padding: 0px 0px 15px;
     font-size: 15px;
 }
+.slds-box{
+    text-align: center;
+    padding: 1rem;
+    border-style: none;
+}
