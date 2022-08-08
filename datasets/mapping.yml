@@ -44,6 +44,16 @@ Account and Person Accounts:
       #common
       - RecordtypeId
 
+Contact records:
+  sf_object: Contact
+  fields:
+    - Firstname
+    - LastName
+    - Birthdate
+    - Email
+  lookups:
+    AccountId:
+      table: Account
 
 Loyalty Program:
     sf_object: LoyaltyProgram
@@ -195,22 +205,59 @@ Promotions:
     LoyaltyProgramId:
       table: LoyaltyProgram
           
+LoyaltyProgramPartnerPromotions:
+  sf_object: LoyaltyPgmPartnerPromotion
+  fields:
+    - ContributionPercentage
+  lookups:
+    LoyaltyProgramPartnerId:
+      table: LoyaltyProgramPartner
+  lookups:
+    PromotionId:
+      table: Promotion
+
+LoyaltyProgramMember:
+  sf_object: LoyaltyProgramMember
+  fields:
+    - MemberType
+    - MembershipNumber
+    - EnrollmentChannel
+    - EnrollmentDate
+    - MemberStatus
+    - MembershipEndDate
+  lookups:
+    ContactId:
+      table: Contact
+  lookups:
+    AccountId:
+      table: Account
+  lookups:
+    ProgramId:
+      table: LoyaltyProgram
 
 
-#JournalType:
-   # sf_object: JournalType
-    #fields:
-     #   - Name
-     #   - Description
-     #   - ProcessType
-
-#JournalsubType:
-   # sf_object: JournalSubType
-   # fields:
-   #     - Description
-   #     - Name
-   # lookups:
-   #   JournalTypeId:
-   #       table: JournalType
+Transaction Journals:
+  sf_object: TransactionJournal
+  fields:
+      - ActivityDate
+      - JournalDate
+      - Quantity
+      - Status
+      - TransactionAmount
+  lookups:
+    JournalTypeId:
+      table: JournalType
+  lookups:
+    JournalSubTypeId:
+      table: JournalSubType
+  lookups:
+    LoyaltyProgramId:
+      table: LoyaltyProgram
+  lookups:
+    MemberId:
+      table: LoyaltyProgramMember
+  lookups:
+    ProductCategoryId:
+      table: ProductCategory
 
         

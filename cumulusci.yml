@@ -37,6 +37,14 @@ tasks:
         options:
             path: scripts/LoyaltyAutomations.cls
             apex: activateLoyaltyProcess();
+    
+    check_purchase_journalSubType:
+        description: Create "purchase" JournalSubType if not present in the destination org
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        group: lm-cci-template
+        options:
+            path: scripts/LoyaltyAutomations.cls
+            apex: createJournalSubTypes();
 
 flows:    
     setup_lm:
@@ -56,7 +64,7 @@ flows:
                 task: dx
                 options:
                     command: force:source:deploy
-                    extra: -p force-app/main/default/standardValueSets/BenefitCategory.standardValueSet-meta.xml,force-app/main/default/standardValueSets/LPPartnerPartnerIndustry.standardValueSet-meta.xml
+                    extra: -p force-app/main/default/standardValueSets/BenefitCategory.standardValueSet-meta.xml,force-app/main/default/standardValueSets/LPPartnerPartnerIndustry.standardValueSet-meta.xml,force-app/main/default/benefitActions/Issue_Voucher.benefitAction-meta.xml
             4:
                 task: ensure_record_types
                 options:
@@ -68,15 +76,12 @@ flows:
                     mapping: datasets/mapping.yml 
                     sql_path: datasets/seed_data.sql
             6:
-                task: dx
-                options:
-                    command: force:source:deploy
-                    extra: -m "LoyaltyProgramSetup"
+                task: check_purchase_journalSubType
             7:
                 task: dx
                 options:
                     command: force:source:deploy
-                    extra: -m "ApexClass, LightningComponentBundle"
+                    extra: -m "LoyaltyProgramSetup, ApexClass, LightningComponentBundle"
             8:
                 task: dx
                 options:
