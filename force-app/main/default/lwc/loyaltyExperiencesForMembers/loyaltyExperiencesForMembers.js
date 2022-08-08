@@ -1,10 +1,11 @@
 import { LightningElement , api} from 'lwc';
 
-import getVoucherDefinitionList from '@salesforce/apex/GetRecordId.getVoucherDefinition'
-import getBenefitTypeList from '@salesforce/apex/GetRecordId.getBenefitType'
-import getPromotionList from '@salesforce/apex/GetRecordId.getPromotion'
-import getLoyaltyTierList from '@salesforce/apex/GetRecordId.getLoyaltyTier'
-import getBenefitTypeforMappingList from '@salesforce/apex/GetRecordId.getBenefitTypeforMapping'
+import getVoucherDefinitionList from '@salesforce/apex/GetRecordId.getVoucherDefinition';
+import getBenefitTypeList from '@salesforce/apex/GetRecordId.getBenefitType';
+import getPromotionList from '@salesforce/apex/GetRecordId.getPromotion';
+import getLoyaltyTierList from '@salesforce/apex/GetRecordId.getLoyaltyTier';
+import getBenefitTypeforMappingList from '@salesforce/apex/GetRecordId.getBenefitTypeforMapping';
+import getLoyaltyProgramList from '@salesforce/apex/GetRecordId.getLoyaltyProgram';
 
 export default class LoyaltyExperiencesForMembers extends LightningElement {
     @api app_description = "Explore the different Loyalty Experiences for Members";
@@ -16,6 +17,7 @@ export default class LoyaltyExperiencesForMembers extends LightningElement {
     PromotionId;
     LoyaltyTierId;
     BenefitTypeForMappingId;
+    loyaltyProgramId
 
     connectedCallback() {  
 
@@ -70,6 +72,14 @@ export default class LoyaltyExperiencesForMembers extends LightningElement {
         console.log("The Benefit type is", result);
         if (result.length) {
             this.BenefitTypeForMappingId = result[0].Id;
+        } 
+    })
+
+    getLoyaltyProgramList()
+    .then(result => {
+        console.log("The Loyalty Program is", result);
+        if (result.length) {
+            this.loyaltyProgramId = result[0].Id;
         } 
     })
 

@@ -4,7 +4,7 @@
     <promptVersions>
         <actionButtonLabel>Back to Learning Path</actionButtonLabel>
         <actionButtonLink>/lightning/n/Loyalty_Experiences_for_Members</actionButtonLink>
-        <body>&lt;p&gt;Click on &lt;strong&gt;Add Benefits&lt;/strong&gt; button and add the following two benefits:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;15% off on Apparel Voucher&lt;/strong&gt; &lt;/li&gt;&lt;li&gt;&lt;strong&gt;Free Shipping on All Order&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</body>
+        <body>&lt;p&gt;Navigate to &lt;strong&gt;Related&lt;/strong&gt; tab. Click on &lt;strong&gt;Add Benefits&lt;/strong&gt; button and add the following two benefits:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;15% off on Apparel Voucher&lt;/strong&gt; &lt;/li&gt;&lt;li&gt;&lt;strong&gt;Free Shipping on All Order&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</body>
         <customApplication>standard__LoyaltyManagement</customApplication>
         <delayDays>1</delayDays>
         <dismissButtonLabel>Dismiss</dismissButtonLabel>

@@ -20,7 +20,7 @@
                         link-in-new-tab={pass_false} 
                         object-name="LoyaltyProgramProcess" 
                         object-id={LoyaltyProgramProcessId}
-                        link-reference="standard__webPage"></c-feature-child>
+                        link-reference="standard__recordPage"></c-feature-child>
 
                     <c-feature-child
                         heading="Hands-On : Activate the Base Rule in the Loyalty Process" 
@@ -46,8 +46,12 @@
                         <c-feature-child
                         heading="View Birthday Promotion process rule" 
                         image="standard:promotions" 
-                        app-text="Click on the &lt;strong/&gt;Birthday Promotion&lt;/strong/&gt; process rule to see how we have applied condition to check for a birthday purchase" 
-                        link-reference="standard__webPage"></c-feature-child>
+                        app-text="Within &quot;Loyalty Process for Accruals&quot;, navigate to the &lt;strong/&gt;Birthday Promotion&lt;/strong/&gt; process rule to see how we have applied condition to check for a birthday purchase" 
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="LoyaltyProgramProcess" 
+                        object-id={LoyaltyProgramProcessId}
+                        link-reference="standard__recordPage"></c-feature-child>
 
                 </lightning-layout-item>
             </lightning-layout>

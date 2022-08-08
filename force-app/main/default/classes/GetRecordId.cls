@@ -4,6 +4,11 @@ public without sharing class GetRecordId {
     public static List<LoyaltyProgram> getLoyaltyProgram(){
         return [SELECT Id, Name FROM LoyaltyProgram WHERE Name LIKE '%NTO Insider%' LIMIT 1];
     }
+
+    @AuraEnabled(cacheable = true)
+    public static List<LoyaltyProgramPartner> getLoyaltyProgramPartner(){
+        return [SELECT Id, Name FROM LoyaltyProgramPartner WHERE Name LIKE '%Hydra Salon%' LIMIT 1];
+    }
     
     @AuraEnabled(cacheable = true)
     public static List<VoucherDefinition> getVoucherDefinition(){

@@ -46,12 +46,16 @@
                         heading="Hands-On: Create a new Voucher definition" 
                         image="standard:screen" 
                         app-text="On the NTO Insider program, navigate to the Loyalty Experiences tab and create a new voucher definition with the following details :  &lt;ul&gt;  &lt;li&gt;  Name : Lipstick Free on every Makeup Purchase &lt;/li&gt; &lt;li&gt; Type: Product or Service &lt;/li&gt; &lt;li&gt; Partner : Hydra Salon &lt;/li&gt; &lt;li&gt; Active : True &lt;/li&gt; &lt;li&gt; Product : Makeup (Choose Product Category 1st) &lt;/li&gt; &lt;li&gt; Expiration Type : Fixed Date &lt;/li&gt; &lt;li&gt; Cost per Voucher : 1 &lt;/li&gt; &lt;li&gt; Effective Date : Beginning of Month&lt;/li&gt; &lt;li&gt; Expiration Date : 2 months from Today's date &lt;/li&gt; &lt;li&gt; Loyalty Program : NTO Insider &lt;/li&gt; &lt;/ul&gt;" 
-                       link-reference="standard__webPage"></c-feature-child>
+                        app="standard__LoyaltyManagement"
+                        link-in-new-tab={pass_false} 
+                        object-name="LoyaltyProgram" 
+                        object-id={loyaltyProgramId}
+                        link-reference="standard__recordPage"></c-feature-child>
                         
                     <c-feature-child
                         heading="Hands-On : Map Benefit Actions" 
                         image="standard:screen"
-                        app-text="Benefit Actions are actions that can be triggered for a benefit. Benefit Actions are executed when a benefit is assigned to a member. &lt;br/&gt; Let us map a Benefit Action under &quot;&lt;strong/&gt;Exclusive Discounts&lt;/strong/&gt; &quot;" 
+                        app-text="Benefit Actions are actions that can be triggered for a benefit. Benefit Actions are executed when a benefit is assigned to a member. &lt;br/&gt; Let us map a Benefit Action under &quot;&lt;strong/&gt;Exclusive Discounts&lt;/strong/&gt; &quot; &lt;br/&gt; &lt;br/&gt; Navigate to &quot;&lt;strong&gt;Related&quot;&lt;/strong&gt; tab. Click &quot;&lt;strong&gt;Map Actions&quot;&lt;/strong&gt; button to view that the benefits are already mapped.  &lt;br/&gt; Map the benefits as per below:  &lt;ul&gt;  &lt;li&gt; Benefits : $20 Voucher on Denali Jacket &lt;/li&gt; &lt;li&gt; Benefit Actions: Issue_Voucher &lt;/li&gt; &lt;li&gt; Value: $20 Voucher on Denali Jacket &lt;/li&gt; &lt;/ul&gt; Similarly, follow the process for 10% off on apparel voucher and 15% off on apparel voucher" 
                         app="standard__LoyaltyManagement"
                         link-in-new-tab={pass_false} 
                         object-name="BenefitType" 
