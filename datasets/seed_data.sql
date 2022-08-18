@@ -224,7 +224,7 @@ CREATE TABLE "Promotion" (
 	"LoyaltyProgramId" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "Promotion" VALUES(1,'3X Bonus Promotion','3X Points for the purchases made this period','True','2023-02-28','2022-07-01','','Accrual','Standard','1');
+INSERT INTO "Promotion" VALUES(1,'3X Bonus Promotion','3X Points for the purchases made this period','True','2023-02-28','2022-04-01','','Accrual','Standard','1');
 INSERT INTO "Promotion" VALUES(2,'Birthday promotion','2X Points credited additionally on member purchases on their birthday','False','','2021-06-01','Member engagement improvement with personalised promotions','Accrual','Standard','1');
 CREATE TABLE "TransactionJournal" (
 	id INTEGER NOT NULL, 
