@@ -63,7 +63,7 @@
                 <actionType>CreditPoints</actionType>
             </actions>
             <ruleName>Base Rule</ruleName>
-            <startDate>2022-07-01</startDate>
+            <startDate>2022-04-01</startDate>
             <status>Active</status>
             <stepMappings>
                 <associatedStep>Credit Points</associatedStep>
@@ -124,7 +124,7 @@
             <previousRule>Base Rule</previousRule>
             <promotion>3X Bonus Promotion</promotion>
             <ruleName>3X Bonus Promotion</ruleName>
-            <startDate>2022-07-01</startDate>
+            <startDate>2022-04-01</startDate>
             <status>Active</status>
             <stepMappings>
                 <associatedStep>Is Silver Member</associatedStep>

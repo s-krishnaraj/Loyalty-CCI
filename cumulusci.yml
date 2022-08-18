@@ -101,6 +101,6 @@ flows:
                 task: dx
                 options:
                     command: force:source:deploy
-                    extra: -m "Prompt"
+                    extra: -m "Prompt, Flow, FlowDefinition"
             12: 
                 task: activate_loyalty_process

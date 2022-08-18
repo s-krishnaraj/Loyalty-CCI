@@ -216,24 +216,24 @@ LoyaltyProgramPartnerPromotions:
     PromotionId:
       table: Promotion
 
-LoyaltyProgramMember:
-  sf_object: LoyaltyProgramMember
-  fields:
-    - MemberType
-    - MembershipNumber
-    - EnrollmentChannel
-    - EnrollmentDate
-    - MemberStatus
-    - MembershipEndDate
-  lookups:
-    ContactId:
-      table: Contact
-  lookups:
-    AccountId:
-      table: Account
-  lookups:
-    ProgramId:
-      table: LoyaltyProgram
+#LoyaltyProgramMember:
+ # sf_object: LoyaltyProgramMember
+  # fields:
+  #   - MemberType
+  #   - MembershipNumber
+  #   - EnrollmentChannel
+  #   - EnrollmentDate
+  #   - MemberStatus
+  #   - MembershipEndDate
+  # lookups:
+  #   ContactId:
+  #     table: Contact
+  # lookups:
+  #   AccountId:
+  #     table: Account
+  # lookups:
+  #   ProgramId:
+  #     table: LoyaltyProgram
 
 
 Transaction Journals:

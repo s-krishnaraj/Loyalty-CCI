@@ -31,7 +31,6 @@ INSERT INTO "Account" VALUES(8,'1987-06-13','','','johndoe@mailinator.com.sample
 INSERT INTO "Account" VALUES(9,'','','','','','','Klay Beauty','klay-beauty-demo.com','Apparel','100','1 Morrison St','NJ','NJ','US','Customer','0120p000001aLWiAAM','False');
 INSERT INTO "Account" VALUES(10,'1997-02-06','','','jane@mailinator.com.sample','Jane','Andrews','','','','','','','','','','0120p000001aLWjAAM','True');
 INSERT INTO "Account" VALUES(11,'1955-07-27','','','','Kendra','Lewis','','','','','','','','','','0120p000001aLWjAAM','True');
-INSERT INTO "Account" VALUES(12,'','','','','','','Sample Account for Entitlements','','','','','','','','','','False');
 CREATE TABLE "Account_rt_mapping" (
 	record_type_id VARCHAR(18) NOT NULL, 
 	developer_name VARCHAR(255), 
@@ -125,7 +124,7 @@ CREATE TABLE "LoyaltyProgramCurrency" (
 );
 INSERT INTO "LoyaltyProgramCurrency" VALUES(1,'True','Tier Points','','Qualifying','','','','','False','1','1');
 INSERT INTO "LoyaltyProgramCurrency" VALUES(2,'True','Points','0.05','NonQualifying','2','Years','Fixed','None','True','1','');
-CREATE TABLE "LoyaltyProgramMember" (
+/*CREATE TABLE "LoyaltyProgramMember" (
 	id INTEGER NOT NULL, 
 	"MemberType" VARCHAR(255), 
 	"MembershipNumber" VARCHAR(255), 
@@ -134,12 +133,13 @@ CREATE TABLE "LoyaltyProgramMember" (
 	"MemberStatus" VARCHAR(255), 
 	"MembershipEndDate" VARCHAR(255), 
 	"ProgramId" VARCHAR(255), 
+	"ContactId" VARCHAR(255),
 	PRIMARY KEY (id)
 );
-INSERT INTO "LoyaltyProgramMember" VALUES(1,'Individual','100007','POS','2011-06-01','Active','','1');
-INSERT INTO "LoyaltyProgramMember" VALUES(2,'Individual','100006','CallCenter','2019-04-07','Active','','1');
-INSERT INTO "LoyaltyProgramMember" VALUES(3,'Individual','100008','POS','2021-11-20','Active','','1');
-INSERT INTO "LoyaltyProgramMember" VALUES(4,'Individual','100004','CallCenter','2015-08-19','Active','','1');
+INSERT INTO "LoyaltyProgramMember" VALUES(1,'Individual','100007','POS','2011-06-01','Active','','1','4');
+INSERT INTO "LoyaltyProgramMember" VALUES(2,'Individual','100006','CallCenter','2019-04-07','Active','','1','5');
+INSERT INTO "LoyaltyProgramMember" VALUES(3,'Individual','100008','POS','2021-11-20','Active','','1','1');
+INSERT INTO "LoyaltyProgramMember" VALUES(4,'Individual','100004','CallCenter','2015-08-19','Active','','1','3');*/
 CREATE TABLE "LoyaltyProgramPartner" (
 	id INTEGER NOT NULL, 
 	"AccrualCostperUnit" VARCHAR(255), 
@@ -224,7 +224,7 @@ CREATE TABLE "Promotion" (
 	"LoyaltyProgramId" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "Promotion" VALUES(1,'3X Bonus Promotion','3X Points for the purchases made this period','True','2023-02-28','2022-04-01','','Accrual','Standard','1');
+INSERT INTO "Promotion" VALUES(1,'3X Bonus Promotion','3X Points for the purchases made this period','false','2023-02-28','2022-04-01','','Accrual','Standard','1');
 INSERT INTO "Promotion" VALUES(2,'Birthday promotion','2X Points credited additionally on member purchases on their birthday','False','','2021-06-01','Member engagement improvement with personalised promotions','Accrual','Standard','1');
 CREATE TABLE "TransactionJournal" (
 	id INTEGER NOT NULL, 
